@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--CSS propio-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Portafolio</title>
+</head>
+
+<body>
+    <header class="cabeza">
+        <h1>&lt;/Nicolás&gt;</h1>
+
+        <div class="main-header">
+            <nav id="nav" class="main-nav">
+                <div class="nav-links">
+                    <a class="link-item" href="#inicio">Inicio</a>
+                    <a class="link-item" href="#acercaDeMi">Acerca de mi</a>
+                    <a class="link-item" href="#portafolio">Portafolio</a>
+                    <a class="link-item" href="#contacto">Contacto</a>
+                </div>
+            </nav>
+            <button id="button-menu" class="button-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="inicio" id="inicio">
+            <div class="nombre">
+                <h2>Bienvenido/a!</h2>
+                <h3>Desarrolador Front-End</h3>
+                <h3>Nicolás Ramirez</h3>
+            </div>
+            <img src="./assets/foto.jpeg" alt="">
+        </section>
+        <section class="acercaDeMi" id="acercaDeMi">
+            <h3>Sobre mi</h3>
+            <p>Soy un amante de la tecnología, tanto de hardware como software.</p>
+            <p>Estoy estudiando y realizando cursos de desarrollo web. Y estoy muy motivado para continuar es te mundo
+                tan lindo de la programación.</p>
+            <p>Estoy en búsqueda de nuevos desafios y experiencias que me ayuden a seguir mejorando mis hablidades.</p>
+        </section>
+
+        <hr>
+
+        <section class="portafolio" id="portafolio">
+            <h3>Portafolio</h3>
+
+            <div class="proyecto">
+                <a href=""><img src="./assets/billeteraSantaFe.jpg" alt=""></a>
+                <div class="descripcion">
+                    <h4>Sitio similar a una billetera que se utiliza en la provincia de Santa Fe. Hecho con HTML, CSS, SASS y
+                        JavaScript.</h4>
+                    <div class="contactoProyectos">
+                        <a href="">Ver sitio</a>
+                        <a href="">Ver codigo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <a href=""><img src="./assets/Marvel.jpg" alt=""></a>
+                <div class="descripcion">
+                    <h4>Página creada para ver series y peliculas de Marvel (todavía está en desarrollo). Hecho con HTML, CSS, SASS, JavaScript y Bootstrap. </h4>
+                    <div class="contactoProyectos">
+                        <a href="">Ver sitio</a>
+                        <a href="">Ver codigo</a>
+                    </div>
+                </div>
+            </div>
+
+            <details>
+                <summary>Desafios de FreeCodeCamp</summary>
+                <div class="desafios">
+                    <a href="https://desafio-free-code-camp-pag-tributo.vercel.app/" target="_blank">Pagina Tributo</a>
+                    <img src="" alt="">
+                </div>
+                <a href=""></a>
+            </details>
+
+            <details>
+                <summary>Desafios de NUCBA</summary>
+                <div class="desafios">
+                    <a href="https://desafio-free-code-camp-pag-tributo.vercel.app/" target="_blank">Pagina Tributo</a>
+                    <img src="" alt="">
+                </div>
+                <a href=""></a>
+            </details>
+            <hr>
+
+            <div class="hablidades">
+                <h3>Hablidades</h3>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="contacto" id="contacto">
+
+        </section>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
