@@ -1,6 +1,6 @@
 //* Colores
-$--colorPrimario: #000000;
-$--colorSecundario: #afafaf;
+$--colorPrimario: #e4e4e4;
+$--colorSecundario: #282828;
 
 
 * {
@@ -13,7 +13,7 @@ body {
     background-color: $--colorSecundario;
     color: $--colorPrimario;
     text-align: center;
-    
+
 }
 
 .cabeza {
@@ -24,12 +24,13 @@ body {
     text-align: center;
     display: flex;
     justify-content: space-between;
+    z-index: 999;
 
     h1 {
         font-size: 17px;
         z-index: 999;
         margin: auto 0 auto 15px;
-        color: #ffffff;
+        color: $--colorSecundario;
     }
 
     //!menu hamburguesa
@@ -39,7 +40,6 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--background-color-blue);
         padding: 0 0.4rem;
 
         .main-nav {
@@ -54,9 +54,11 @@ body {
             background-color: rgba(0, 0, 0, 0.7);
             z-index: 99;
         }
+
         .main-nav.show {
             margin-left: 0;
         }
+
         .nav-links {
             background-color: $--colorPrimario;
             display: flex;
@@ -65,30 +67,34 @@ body {
             height: 100%;
             align-items: center;
             justify-content: flex-start;
+
             .link-item {
                 margin-top: 32px;
-                color: #ffffff;
+                color: $--colorSecundario;
                 text-decoration: none;
                 font-weight: bold;
                 position: relative;
                 cursor: pointer;
+
                 &::after {
                     position: absolute;
                     content: "";
-                    background-color: #ffffff;
+                    background-color: $--colorSecundario;
                     bottom: 0px;
                     left: 0;
                     width: 0%;
                     height: 3px;
                     transition: 0.3s ease all;
-                    color: black;
+                    color: $--colorPrimario;
                 }
+
                 &:hover::after {
                     width: 100%;
-                    color: black;
+                    color: $--colorPrimario;
                 }
             }
         }
+
         .button-menu {
             width: 100%;
             margin: auto;
@@ -99,89 +105,140 @@ body {
             align-items: flex-end;
             cursor: pointer;
             z-index: 100;
+
             span {
                 width: 30px;
                 height: 2px;
                 margin-bottom: 3px;
                 position: relative;
-                background: white;
+                background: rgb(0, 0, 0);
                 border-radius: 3px;
                 transform-origin: 4px 0px;
                 transition: all 0.2s linear;
                 z-index: 100;
             }
         }
+
         .button-menu.close span {
             opacity: 1;
             transform: rotate(45deg) translate(0px, 0px);
-            background: #ffffff;
+            background: #000000;
         }
-    
+
         .button-menu.close span:nth-child(2) {
             transform: rotate(-45deg) translate(-8px, 5px);
         }
-    
+
         .button-menu.close span:nth-child(3) {
             display: none;
         }
-    }//! fin menu hamburguesa
+    }
+
+    //! fin menu hamburguesa
 }
 
 main {
     padding: 0px 5px;
+
     .inicio {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: 15px 5px;
-        .nombre{
-            h2{
+
+        .nombre {
+            h2 {
                 margin: 20px 0;
                 font-size: 2em;
             }
-            h3{
+
+            h3 {
                 margin: 10px 0;
                 font-size: 1.8em;
             }
         }
-        img{
+
+        img {
             width: 250px;
             border-radius: 70px 0;
         }
     }
 
-    hr{
+    hr {
         width: 95%;
-        color: black;
         margin: auto;
     }
-    
-    .portafolio{
+
+    .portafolio {
         display: flex;
         flex-direction: column;
-        .proyecto{
+
+        .proyecto {
             display: flex;
             flex-direction: column;
-            margin-top: 20px;
-            img{
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid rgba(126, 126, 126, 0.86);
+            border-radius: 16px;
+
+            img {
                 width: 250px;
+            }
+
+            .btn {
+                width: 100px;
+                height: 40px;
+                margin: 0.5em;
+                background: black;
+                color: white;
+                border: none;
+                border-radius: 0.625em;
+                font-size: 15px;
+                font-weight: bold;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                &:hover {
+                    color: black;
+                }
+                &:after {
+                    content: "";
+                    background: white;
+                    position: absolute;
+                    left: -20%;
+                    right: -20%;
+                    top: 0;
+                    bottom: 0;
+                    transform: skewX(-45deg) scale(0, 1);
+                    transition: all 0.5s;
+                }
+                &:hover:after {
+                    transform: skewX(-45deg) scale(1, 1);
+                    -webkit-transition: all 0.5s;
+                    transition: all 0.5s;
+                }
             }
         }
     }
-    .acercaDeMi, .portafolio{
+
+    .acercaDeMi,
+    .portafolio {
         transition: 0.5s all;
         animation: mostarDerecha 1s;
         opacity: 1;
         margin: 30px 0;
-        h3{
+
+        h3 {
             font-size: 2em;
         }
     }
-    @keyframes mostarDerecha{
-        0%{
+
+    @keyframes mostarDerecha {
+        0% {
             transform: translateX(-100px);
         }
-        100%{
+
+        100% {
             transform: translateX(0);
         }
     }

@@ -6,13 +6,13 @@
 }
 
 body {
-  background-color: #afafaf;
-  color: #000000;
+  background-color: #282828;
+  color: #e4e4e4;
   text-align: center;
 }
 
 .cabeza {
-  background-color: #000000;
+  background-color: #e4e4e4;
   padding: 5px;
   position: -webkit-sticky;
   position: sticky;
@@ -24,13 +24,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 999;
 }
 
 .cabeza h1 {
   font-size: 17px;
   z-index: 999;
   margin: auto 0 auto 15px;
-  color: #ffffff;
+  color: #282828;
 }
 
 .cabeza .main-header {
@@ -45,7 +46,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--background-color-blue);
   padding: 0 0.4rem;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 .cabeza .main-header .nav-links {
-  background-color: #000000;
+  background-color: #e4e4e4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +88,7 @@ body {
 
 .cabeza .main-header .nav-links .link-item {
   margin-top: 32px;
-  color: #ffffff;
+  color: #282828;
   text-decoration: none;
   font-weight: bold;
   position: relative;
@@ -98,19 +98,19 @@ body {
 .cabeza .main-header .nav-links .link-item::after {
   position: absolute;
   content: "";
-  background-color: #ffffff;
+  background-color: #282828;
   bottom: 0px;
   left: 0;
   width: 0%;
   height: 3px;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
-  color: black;
+  color: #e4e4e4;
 }
 
 .cabeza .main-header .nav-links .link-item:hover::after {
   width: 100%;
-  color: black;
+  color: #e4e4e4;
 }
 
 .cabeza .main-header .button-menu {
@@ -137,7 +137,7 @@ body {
   height: 2px;
   margin-bottom: 3px;
   position: relative;
-  background: white;
+  background: black;
   border-radius: 3px;
   -webkit-transform-origin: 4px 0px;
           transform-origin: 4px 0px;
@@ -150,7 +150,7 @@ body {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(0px, 0px);
           transform: rotate(45deg) translate(0px, 0px);
-  background: #ffffff;
+  background: #000000;
 }
 
 .cabeza .main-header .button-menu.close span:nth-child(2) {
@@ -195,7 +195,6 @@ main .inicio img {
 
 main hr {
   width: 95%;
-  color: black;
   margin: auto;
 }
 
@@ -217,14 +216,58 @@ main .portafolio .proyecto {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 20px;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid rgba(126, 126, 126, 0.86);
+  border-radius: 16px;
 }
 
 main .portafolio .proyecto img {
   width: 250px;
 }
 
-main .acercaDeMi, main .portafolio {
+main .portafolio .proyecto .btn {
+  width: 100px;
+  height: 40px;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+main .portafolio .proyecto .btn:hover {
+  color: black;
+}
+
+main .portafolio .proyecto .btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: skewX(-45deg) scale(0, 1);
+          transform: skewX(-45deg) scale(0, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+main .portafolio .proyecto .btn:hover:after {
+  -webkit-transform: skewX(-45deg) scale(1, 1);
+          transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+main .acercaDeMi,
+main .portafolio {
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
   -webkit-animation: mostarDerecha 1s;
@@ -233,7 +276,8 @@ main .acercaDeMi, main .portafolio {
   margin: 30px 0;
 }
 
-main .acercaDeMi h3, main .portafolio h3 {
+main .acercaDeMi h3,
+main .portafolio h3 {
   font-size: 2em;
 }
 
