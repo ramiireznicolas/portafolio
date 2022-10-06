@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #282828;
+  background-color: #1c1c1c;
   color: #e4e4e4;
   text-align: center;
 }
@@ -25,13 +25,14 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 999;
+  height: 40px;
 }
 
 .cabeza h1 {
   font-size: 17px;
   z-index: 999;
   margin: auto 0 auto 15px;
-  color: #282828;
+  color: #1c1c1c;
 }
 
 .cabeza .main-header {
@@ -47,6 +48,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0.4rem;
+  margin: auto;
 }
 
 .cabeza .main-header .main-nav {
@@ -88,7 +90,7 @@ body {
 
 .cabeza .main-header .nav-links .link-item {
   margin-top: 32px;
-  color: #282828;
+  color: #1c1c1c;
   text-decoration: none;
   font-weight: bold;
   position: relative;
@@ -98,7 +100,7 @@ body {
 .cabeza .main-header .nav-links .link-item::after {
   position: absolute;
   content: "";
-  background-color: #282828;
+  background-color: #1c1c1c;
   bottom: 0px;
   left: 0;
   width: 0%;
@@ -208,6 +210,18 @@ main .portafolio {
           flex-direction: column;
 }
 
+main .portafolio .sectionPortafolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 main .portafolio .proyecto {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,10 +230,12 @@ main .portafolio .proyecto {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px 0;
+  margin: 10px 5px;
   padding: 15px;
   border: 1px solid rgba(126, 126, 126, 0.86);
   border-radius: 16px;
+  background-color: #0000009b;
+  max-width: 400px;
 }
 
 main .portafolio .proyecto img {
@@ -239,6 +255,7 @@ main .portafolio .proyecto .btn {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  border: 1px solid white;
 }
 
 main .portafolio .proyecto .btn:hover {
@@ -248,6 +265,7 @@ main .portafolio .proyecto .btn:hover {
 main .portafolio .proyecto .btn:after {
   content: "";
   background: white;
+  color: black;
   position: absolute;
   left: -20%;
   right: -20%;

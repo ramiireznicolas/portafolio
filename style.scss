@@ -1,6 +1,6 @@
 //* Colores
 $--colorPrimario: #e4e4e4;
-$--colorSecundario: #282828;
+$--colorSecundario: #1c1c1c;
 
 
 * {
@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     z-index: 999;
+    height: 40px;
 
     h1 {
         font-size: 17px;
@@ -41,6 +42,7 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 0 0.4rem;
+        margin: auto;
 
         .main-nav {
             position: fixed;
@@ -171,15 +173,24 @@ main {
 
     .portafolio {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;  
+
+        .sectionPortafolio{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }  
 
         .proyecto {
             display: flex;
             flex-direction: column;
-            margin: 10px 0;
+            margin: 10px 5px;
             padding: 15px;
             border: 1px solid rgba(126, 126, 126, 0.86);
             border-radius: 16px;
+            background-color: #0000009b;
+            max-width: 400px;
 
             img {
                 width: 250px;
@@ -198,12 +209,14 @@ main {
                 cursor: pointer;
                 position: relative;
                 overflow: hidden;
+                border: 1px solid white;
                 &:hover {
                     color: black;
                 }
                 &:after {
                     content: "";
                     background: white;
+                    color: black;
                     position: absolute;
                     left: -20%;
                     right: -20%;
