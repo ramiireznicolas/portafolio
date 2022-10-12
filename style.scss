@@ -173,14 +173,14 @@ main {
 
     .portafolio {
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;
 
-        .sectionPortafolio{
+        .sectionPortafolio {
             display: flex;
             flex-wrap: wrap;
             text-align: center;
             justify-content: center;
-        }  
+        }
 
         .proyecto {
             display: flex;
@@ -190,69 +190,70 @@ main {
             border: 1px solid rgba(126, 126, 126, 0.86);
             border-radius: 16px;
             background-color: #0000009b;
-            max-width: 400px;
+            max-width: 350px;
 
             img {
-                width: 250px;
+                width: 200px;
             }
 
             .btn {
+                margin: 15px auto 0px;
                 width: 100px;
-                height: 40px;
-                margin: 0.5em;
-                background: black;
-                color: white;
-                border: none;
-                border-radius: 0.625em;
-                font-size: 15px;
-                font-weight: bold;
+                height: 30px;
+                font-size: 1em;
                 cursor: pointer;
+                border: none;
+                outline: none;
+                background: transparent;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
                 position: relative;
-                overflow: hidden;
-                border: 1px solid white;
+                transition: all 0.5s;
+                z-index: 1;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 5px;
+                    height: 100%;
+                    background-color: white;
+                    z-index: -1;
+                    transition: all 0.5s;
+                }
+                &:hover::before {
+                    width: 100%;
+                }
                 &:hover {
                     color: black;
                 }
-                &:after {
-                    content: "";
-                    background: white;
-                    color: black;
-                    position: absolute;
-                    left: -20%;
-                    right: -20%;
-                    top: 0;
-                    bottom: 0;
-                    transform: skewX(-45deg) scale(0, 1);
-                    transition: all 0.5s;
-                }
-                &:hover:after {
-                    transform: skewX(-45deg) scale(1, 1);
-                    -webkit-transition: all 0.5s;
-                    transition: all 0.5s;
+                &:active:before {
+                    background: #b9b9b9;
                 }
             }
         }
     }
 
-    .acercaDeMi,
-    .portafolio {
-        transition: 0.5s all;
-        animation: mostarDerecha 1s;
-        opacity: 1;
-        margin: 30px 0;
-
-        h3 {
-            font-size: 2em;
-        }
-    }
-
-    @keyframes mostarDerecha {
-        0% {
-            transform: translateX(-100px);
-        }
-
-        100% {
-            transform: translateX(0);
+    details{
+        cursor: pointer;
+        border: 1px solid rgba(126, 126, 126, 0.86);
+        border-radius: 16px;
+        background-color: #0000009b;
+        margin: 15px auto;
+        width: 85%;
+        .challenge{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .desafios{
+                margin: 5px;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

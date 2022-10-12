@@ -235,89 +235,83 @@ main .portafolio .proyecto {
   border: 1px solid rgba(126, 126, 126, 0.86);
   border-radius: 16px;
   background-color: #0000009b;
-  max-width: 400px;
+  max-width: 350px;
 }
 
 main .portafolio .proyecto img {
-  width: 250px;
+  width: 200px;
 }
 
 main .portafolio .proyecto .btn {
+  margin: 15px auto 0px;
   width: 100px;
-  height: 40px;
-  margin: 0.5em;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 0.625em;
-  font-size: 15px;
-  font-weight: bold;
+  height: 30px;
+  font-size: 1em;
   cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
   position: relative;
-  overflow: hidden;
-  border: 1px solid white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+main .portafolio .proyecto .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+main .portafolio .proyecto .btn:hover::before {
+  width: 100%;
 }
 
 main .portafolio .proyecto .btn:hover {
   color: black;
 }
 
-main .portafolio .proyecto .btn:after {
-  content: "";
-  background: white;
-  color: black;
-  position: absolute;
-  left: -20%;
-  right: -20%;
-  top: 0;
-  bottom: 0;
-  -webkit-transform: skewX(-45deg) scale(0, 1);
-          transform: skewX(-45deg) scale(0, 1);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+main .portafolio .proyecto .btn:active:before {
+  background: #b9b9b9;
 }
 
-main .portafolio .proyecto .btn:hover:after {
-  -webkit-transform: skewX(-45deg) scale(1, 1);
-          transform: skewX(-45deg) scale(1, 1);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+main details {
+  cursor: pointer;
+  border: 1px solid rgba(126, 126, 126, 0.86);
+  border-radius: 16px;
+  background-color: #0000009b;
+  margin: 15px auto;
+  width: 85%;
 }
 
-main .acercaDeMi,
-main .portafolio {
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  -webkit-animation: mostarDerecha 1s;
-          animation: mostarDerecha 1s;
-  opacity: 1;
-  margin: 30px 0;
+main details .challenge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .acercaDeMi h3,
-main .portafolio h3 {
-  font-size: 2em;
+main details .challenge .desafios {
+  margin: 5px;
 }
 
-@-webkit-keyframes mostarDerecha {
-  0% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes mostarDerecha {
-  0% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+main details .challenge .desafios a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
