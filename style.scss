@@ -242,16 +242,25 @@ main {
         background-color: #0000009b;
         margin: 15px auto;
         width: 85%;
+        font-size: 1.2em;
         .challenge{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             .desafios{
-                margin: 5px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
                 a{
                     text-decoration: none;
                     color: white;
                     cursor: pointer;
+                    font-size: .8em;
+                }
+                img{
+                    width: 100px;
                 }
             }
         }

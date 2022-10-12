@@ -292,6 +292,7 @@ main details {
   background-color: #0000009b;
   margin: 15px auto;
   width: 85%;
+  font-size: 1.2em;
 }
 
 main details .challenge {
@@ -306,12 +307,28 @@ main details .challenge {
 }
 
 main details .challenge .desafios {
-  margin: 5px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 main details .challenge .desafios a {
   text-decoration: none;
   color: white;
   cursor: pointer;
+  font-size: .8em;
+}
+
+main details .challenge .desafios img {
+  width: 100px;
 }
 /*# sourceMappingURL=style.css.map */
