@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 //* Colores
-$--colorPrimario: #e4e4e4;
-$--colorSecundario: #1c1c1c;
+$--colorPrimario: rgb(255, 255, 228);
+$--colorSecundario: rgb(28, 28, 28);
+$--colorTransparente: rgba(0, 0, 0, 0.61);
 
 
 * {
@@ -141,6 +145,38 @@ body {
 
 main {
     padding: 0px 5px;
+    p{
+        font-family: 'Source Code Pro', monospace;
+        margin: 5px auto;
+        color: white;
+    }
+    h4{
+        font-family: 'Roboto Condensed', sans-serif;
+        margin: 5px auto 0;
+        color: white;
+    }
+
+    .wave{
+        -webkit-box-reflect: below -5px
+         linear-gradient(transparent, rgba(0,0,0,0.2));
+        font-size: 22px;
+        margin: 20px auto 13px;
+        span{
+            display: inline-block;
+            animation: wave-anim 1s infinite;
+            animation-delay: calc(0.1s * var(--item));
+        }
+        @keyframes wave-anim{
+            0%, 
+            40%, 
+            100%{
+                transform: translateY(0);
+            }
+            20%{
+                transform: translateY(-7px);
+            }
+        }
+    }
 
     .inicio {
         display: flex;
@@ -189,7 +225,7 @@ main {
             padding: 15px;
             border: 1px solid rgba(126, 126, 126, 0.86);
             border-radius: 16px;
-            background-color: #0000009b;
+            background-color: $--colorTransparente;
             max-width: 350px;
 
             img {
@@ -200,13 +236,15 @@ main {
                 margin: 15px auto 0px;
                 width: 100px;
                 height: 30px;
+                font-family: 'Bebas Neue', cursive;
+                letter-spacing: 2px;
+                font-weight: lighter;
                 font-size: 1em;
                 cursor: pointer;
                 border: none;
                 outline: none;
                 background: transparent;
                 color: white;
-                font-family: 'Times New Roman', Times, serif;
                 font-weight: 700;
                 position: relative;
                 transition: all 0.5s;
@@ -216,7 +254,7 @@ main {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    width: 5px;
+                    width: 0px;
                     height: 100%;
                     background-color: white;
                     z-index: -1;
@@ -233,34 +271,61 @@ main {
                 }
             }
         }
-    }
 
-    details{
-        cursor: pointer;
-        border: 1px solid rgba(126, 126, 126, 0.86);
-        border-radius: 16px;
-        background-color: #0000009b;
-        margin: 15px auto;
-        width: 85%;
-        font-size: 1.2em;
-        .challenge{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            .desafios{
-                margin: 10px;
+        details{
+            cursor: pointer;
+            border: 1px solid rgba(126, 126, 126, 0.86);
+            border-radius: 16px;
+            background-color: $--colorTransparente;
+            margin: 15px auto;
+            width: 85%;
+            font-size: 1.2em;
+            .challenge{
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap;
                 justify-content: center;
-                text-align: center;
-                a{
-                    text-decoration: none;
-                    color: white;
-                    cursor: pointer;
-                    font-size: .8em;
-                }
-                img{
-                    width: 100px;
+                .desafios{
+                    margin: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    position: relative;
+                    padding: 3px;
+                    &::after{
+                        content: "";
+                        inset: 4px;
+                    }
+                    &::before{
+                        content: "";
+                        width: 100px;
+                        height: 140%;
+                        background: linear-gradient(#00ccff, #d400d4);
+                        animation: animate-desafios 15s linear infinite;
+                        position: absolute;
+                    }
+                    @keyframes animate-desafios{
+                        0%{
+                            transform: rotate(0deg);
+                        }
+                        100%{
+                            transform: rotate(360deg);
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        cursor: pointer;
+                        font-size: .8em;
+                        z-index: 99;
+                        background-color: #000000;
+                    }
+                    img{
+                        width: 100px;
+                        border-radius: 2px;
+                    }
                 }
             }
         }
