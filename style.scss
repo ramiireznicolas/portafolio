@@ -147,7 +147,7 @@ main {
     padding: 0px 5px;
     p{
         font-family: 'Source Code Pro', monospace;
-        margin: 5px auto;
+        margin: 20px auto;
         color: white;
     }
     h4{
@@ -190,16 +190,11 @@ main {
                 font-size: 2em;
             }
 
-            h3 {
-                margin: 10px 0;
-                font-size: 1.8em;
-            }
         }
-
         img {
             width: 250px;
             border-radius: 70px 0;
-        }
+        }       
     }
 
     hr {
@@ -303,7 +298,7 @@ main {
                         width: 100px;
                         height: 140%;
                         background: linear-gradient(#00ccff, #d400d4);
-                        animation: animate-desafios 15s linear infinite;
+                        animation: animate-desafios 10s linear infinite;
                         position: absolute;
                     }
                     @keyframes animate-desafios{

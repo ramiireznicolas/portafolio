@@ -173,7 +173,7 @@ main {
 
 main p {
   font-family: 'Source Code Pro', monospace;
-  margin: 5px auto;
+  margin: 20px auto;
   color: white;
 }
 
@@ -238,11 +238,6 @@ main .inicio {
 main .inicio .nombre h2 {
   margin: 20px 0;
   font-size: 2em;
-}
-
-main .inicio .nombre h3 {
-  margin: 10px 0;
-  font-size: 1.8em;
 }
 
 main .inicio img {
@@ -393,8 +388,8 @@ main .portafolio details .challenge .desafios::before {
   height: 140%;
   background: -webkit-gradient(linear, left top, left bottom, from(#00ccff), to(#d400d4));
   background: linear-gradient(#00ccff, #d400d4);
-  -webkit-animation: animate-desafios 15s linear infinite;
-          animation: animate-desafios 15s linear infinite;
+  -webkit-animation: animate-desafios 10s linear infinite;
+          animation: animate-desafios 10s linear infinite;
   position: absolute;
 }
 
