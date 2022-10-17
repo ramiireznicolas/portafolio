@@ -13,11 +13,32 @@ $--colorTransparente: rgba(0, 0, 0, 0.61);
     margin: 0;
 }
 
+.fadeTop {
+    opacity: 0; 
+    transform: translate(0, 15vh);
+    transition: all 1s;
+}
+.fadeRight {
+    opacity: 0;
+    transform: translate(15vh, 0vh);
+    transition: all 1s;
+}
+
+.fadeLeft {
+    opacity: 0;
+    transform: translate(-15vh, 0vh);
+    transition: all 1s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 body {
     background-color: $--colorSecundario;
     color: $--colorPrimario;
     text-align: center;
-
 }
 
 .cabeza {
@@ -182,14 +203,15 @@ main {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        text-align: center;
         margin: 15px 5px;
 
         .nombre {
+            margin: auto;
             h2 {
                 margin: 20px 0;
                 font-size: 2em;
             }
-
         }
         img {
             width: 250px;
