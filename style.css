@@ -259,11 +259,11 @@ main .inicio {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
-  margin: 15px 5px;
+  margin: 15px auto;
 }
 
 main .inicio .nombre {
@@ -271,13 +271,14 @@ main .inicio .nombre {
 }
 
 main .inicio .nombre h2 {
-  margin: 20px 0;
+  margin: 20px auto;
   font-size: 2em;
 }
 
 main .inicio img {
   width: 250px;
   border-radius: 70px 0;
+  margin: auto;
 }
 
 main hr {
@@ -378,7 +379,7 @@ main .portafolio details {
   border-radius: 16px;
   background-color: rgba(0, 0, 0, 0.61);
   margin: 15px auto;
-  width: 85%;
+  width: 70%;
   font-size: 1.2em;
 }
 
@@ -503,14 +504,13 @@ main form {
           flex-direction: column;
   border: 1px solid white;
   border-radius: 5px;
-  max-width: 300px;
-  margin: auto;
+  max-width: 500px;
+  margin: 15px auto;
 }
 
 main form .form-control {
   position: relative;
   margin: 15px auto 5px;
-  width: 190px;
 }
 
 main form .form-control input {
@@ -550,5 +550,107 @@ main form .form-control input:valid + label span {
   color: white;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
+}
+
+main form button {
+  font-family: inherit;
+  font-size: 20px;
+  background: #1b8741;
+  color: white;
+  padding: 5px 10px;
+  padding-left: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 140px;
+  margin: 5px auto;
+  height: 40px;
+}
+
+main form button span {
+  display: block;
+  margin-left: 0.3em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main form button svg {
+  display: block;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+main form button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+main form button:hover .svg-wrapper {
+  -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
+          animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+main form button:hover svg {
+  -webkit-transform: translateX(1.2em) rotate(45deg) scale(1.1);
+          transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+main form button:hover span {
+  -webkit-transform: translateX(5em);
+          transform: translateX(5em);
+}
+
+@-webkit-keyframes fly-1 {
+  from {
+    -webkit-transform: translateY(0.1em);
+            transform: translateY(0.1em);
+  }
+  to {
+    -webkit-transform: translateY(-0.1em);
+            transform: translateY(-0.1em);
+  }
+}
+
+@keyframes fly-1 {
+  from {
+    -webkit-transform: translateY(0.1em);
+            transform: translateY(0.1em);
+  }
+  to {
+    -webkit-transform: translateY(-0.1em);
+            transform: translateY(-0.1em);
+  }
+}
+
+main footer {
+  background-color: #ffffe4;
+  color: black;
+  font-size: 1.3em;
+}
+
+main footer .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+main footer .redes img {
+  width: 50px;
+  margin: 5px;
 }
 /*# sourceMappingURL=style.css.map */
