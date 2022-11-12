@@ -60,6 +60,10 @@ body {
         color: $--colorSecundario;
     }
 
+    .desktop{
+        display: none;
+    }
+
     //!menu hamburguesa
     .main-header {
         height: 25px;
@@ -459,6 +463,7 @@ main {
             width: 140px;
             margin: 5px auto;
             height: 40px;
+            cursor: pointer;
             span {
                 display: block;
                 margin-left: 0.3em;
@@ -510,6 +515,27 @@ main {
                 width: 50px;
                 margin: 5px;
             }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .main-nav{
+        display: none;
+    }
+    .cabeza .main-header .button-menu{
+        display: none;
+    }
+    .cabeza .desktop{
+        display: flex;
+        justify-content: space-between;
+        width: 750px;
+        margin: auto 20px;
+        .link{
+            text-decoration: none;
+            color: black;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.2em;
         }
     }
 }

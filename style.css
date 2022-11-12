@@ -68,6 +68,10 @@ body {
   color: #1c1c1c;
 }
 
+.cabeza .desktop {
+  display: none;
+}
+
 .cabeza .main-header {
   height: 25px;
   width: 100%;
@@ -573,6 +577,7 @@ main form button {
   width: 140px;
   margin: 5px auto;
   height: 40px;
+  cursor: pointer;
 }
 
 main form button span {
@@ -652,5 +657,30 @@ main footer .redes {
 main footer .redes img {
   width: 50px;
   margin: 5px;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .cabeza .main-header .button-menu {
+    display: none;
+  }
+  .cabeza .desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 750px;
+    margin: auto 20px;
+  }
+  .cabeza .desktop .link {
+    text-decoration: none;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
